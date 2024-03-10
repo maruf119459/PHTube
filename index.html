@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/fabicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>PH TUBE</title>
+    <style>
+    .button {
+        border: none;
+        outline: none;
+        padding: 5px 20px 5px 20px;
+        background-color: #25252533;
+        cursor: pointer;
+        font-size: 18px;
+        width:auto;
+        height:auto;
+        color: #252525B3;
+        border-radius: 4px;
+      }
+      
+      .activeMore, .button:hover {
+        background-color: #FF1F3D;
+        color: white;
+      }
+      </style>
+</head>
+<body class="">
+    <header>
+        <nav class="flex justify-between items-center	mx-[60px] mt-[60px] mb-[34px] text-[18px] font-medium">
+            <div>
+                <button onclick="redirectToHomePage()"><img src="images/Logo.png" alt=""></button>
+            </div>
+            <div>
+                <button onclick="sortByView()" class="btn bg-[#25252533]">Sort by view</button>
+            </div>
+            <div>
+                <button onclick="redirectToBlogPage()" class="btn text-[#fff] bg-[#FF1F3D]">Blog</button>
+            </div>
+        </nav>
+        <div  class="mx-[60px] mb-[32px]">
+            <hr>
+        </div>
+    </header>
+    <main>
+        <section id="btn-section" class="flex justify-center items-center gap-[23px] text-[16px] font-medium mb-[40px]">
+            <button onclick='allCateogory()' id="allBtn" class="button activeMore">All</button>
+            
+            <button onclick="musicCateogory()" id="musicBtn" class="button">Music</button>
+            
+            <button onclick="comedyCateogory()" id="comedyBtn" class="button">Comedy</button>
+            
+            <button onclick="drawingCateogory()" id="drawingBtn" class="button">Drawing</button>
+        </section>
+
+        <section id="loading-section" class="hidden">
+            <div class="flex justify-center items-center">
+                <span class="loading loading-dots loading-lg pt-[50px] pb-[50px]"></span>
+            </div>
+        </section>
+
+        <section id="oflineLoading" class="hidden">
+            <div class="flex justify-center items-center">
+                <span class="loading loading-dots loading-lg pt-[25px] pb-[20px]"></span>
+            </div>
+        </section>
+
+        <section class="hidden" id="no-internet" >
+            <div class="flex flex-col justify-center items-center">
+                <h3 class="text-center text-[32px] font-bold w-[600px]">No internet! Please check your internet connection and reload website.</h3>
+                <img class="w-[550px] h-" src="images/noInternet.png" alt="">
+                <button onclick="reLoadPage()" class="btn btn-sm mt-[5px] rounded-2xl border-2	border-indigo-600 hover:bg-sky-500">Reload</button>
+            </div>
+        </section>
+
+
+        <section id="video" class="mx-[60px] mb-[120px] grid grid-cols-4 gap-[24px] ">
+           
+            
+
+
+
+        </section>
+
+        <section  class="hidden flex justify-center items-center mt-[100px] " id="no-data-view">
+            <div class="flex flex-col w-[430px] items-center justify-center">
+                <img class="w-[140px] h-[140px]" src="images/Icon.png" alt="">
+                <h1 class="text-[32px] font-bold text-center">Oops!! Sorry, There is no content here</h1>
+            </div>
+        </section>
+    </main>
+    <script src="js/js.js"></script>
+
+</body>
+</html>
